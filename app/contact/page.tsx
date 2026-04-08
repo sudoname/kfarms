@@ -172,7 +172,7 @@ export default function ContactPage() {
                       id="interest"
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-gold focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-gold focus:outline-none transition-colors text-white [&>option]:text-black [&>option]:bg-white"
                     >
                       <option value="">Select one...</option>
                       <option value="partnership">Partnership</option>

@@ -2,50 +2,50 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { Sprout, TreeDeciduous, Beef, Factory, TrendingUp } from "lucide-react"
+import { Sprout, TreeDeciduous, Beef, Factory, TrendingUp, Users } from "lucide-react"
 
 const stats = [
   {
     icon: TrendingUp,
     value: 250,
     suffix: " acres",
-    label: "Current Operations",
+    label: "Current Operations (2026)",
     description: "Across Ikoyi, Otu, and Ilero",
   },
   {
     icon: TreeDeciduous,
-    value: 80000,
+    value: 14000,
     suffix: "",
-    label: "Oil Palm Trees (Target)",
-    description: "Long-term plantation development",
-  },
-  {
-    icon: Sprout,
-    value: 20000,
-    suffix: "",
-    label: "Plantain Suckers",
-    description: "Intercropping for early returns",
-  },
-  {
-    icon: Beef,
-    value: 80,
-    suffix: " head",
-    label: "Cattle (Target)",
-    description: "From 10 head, scaling systematically",
+    label: "Trees Planted",
+    description: "Oil palm & cashew trees",
   },
   {
     icon: Factory,
+    value: 2,
+    suffix: " facilities",
+    label: "Processing Facilities",
+    description: "Mini mills in Ilero & Ikoyi",
+  },
+  {
+    icon: Users,
+    value: 14,
+    suffix: " workers",
+    label: "Team",
+    description: "Growing operational workforce",
+  },
+  {
+    icon: Beef,
     value: 10,
-    suffix: " acres",
-    label: "Processing Hub",
-    description: "Palm oil mill in Ilero",
+    suffix: " cattle",
+    label: "Livestock Addition",
+    description: "Being added in 2026",
   },
   {
     icon: TrendingUp,
     value: 1000,
     suffix: " acres",
     label: "Vision 2030",
-    description: "Target operational footprint",
+    description: "Aggressive expansion target",
   },
 ]
 

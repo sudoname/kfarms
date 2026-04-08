@@ -36,23 +36,23 @@ const platformSections = [
     description: "Oil palm is the long-term economic engine of the platform, designed for scale, consistency, and value chain control",
     details: [
       {
-        title: "Targeting ~80,000 Trees",
-        description: "Structured plantation expansion targeting approximately 80,000 oil palm trees"
+        title: "14,000 Trees Planted (2026)",
+        description: "Oil palm and cashew trees currently in ground, with aggressive expansion planned"
       },
       {
-        title: "Structured Expansion",
+        title: "Target: 80,000 Trees by 2030",
         description: "Systematic plantation growth over time with focus on tree health and spacing"
       },
       {
         title: "Integrated Approach",
-        description: "Integrated approach to production and processing for maximum value capture"
+        description: "Combining production and processing for maximum value capture"
       },
       {
         title: "Long-Term Value",
         description: "Designed for decades of consistent production and compounding returns"
       }
     ],
-    metrics: ["~80,000 trees target", "Structured expansion", "Value chain control"]
+    metrics: ["14,000 trees planted", "80,000 by 2030", "Oil palm & cashew"]
   },
   {
     id: "livestock",
@@ -61,8 +61,8 @@ const platformSections = [
     description: "Cattle are integrated into the system to enhance soil fertility, support future dairy production, and enable a circular agricultural model",
     details: [
       {
-        title: "Herd Expansion",
-        description: "Systematic growth from ~10 to ~80 cattle through disciplined herd management"
+        title: "10 Cattle Added in 2026",
+        description: "Starting livestock operations with 10 cattle, scaling to 80 by 2030"
       },
       {
         title: "Manure-Driven Enrichment",
@@ -77,7 +77,7 @@ const platformSections = [
         description: "Integrated livestock system creating synergies across the entire platform"
       }
     ],
-    metrics: ["~10 → ~80 cattle", "Soil enrichment", "Dairy potential"]
+    metrics: ["10 cattle (2026)", "80 by 2030", "Circular farming"]
   },
   {
     id: "processing",
@@ -86,8 +86,8 @@ const platformSections = [
     description: "A dedicated processing hub enables deeper value capture and operational control across the palm oil value chain",
     details: [
       {
-        title: "10-Acre Facility in Ilero",
-        description: "Dedicated processing facility for palm fruit processing and oil extraction"
+        title: "2 Mini Processing Facilities (2026)",
+        description: "Mini oil palm production facilities in Ilero and Ikoyi for localized processing"
       },
       {
         title: "Improved Yield Efficiency",
@@ -102,7 +102,7 @@ const platformSections = [
         description: "Built to support long-term growth and increasing production volumes"
       }
     ],
-    metrics: ["10-acre facility", "Yield efficiency", "Long-term scale"]
+    metrics: ["2 mini facilities", "Ilero & Ikoyi", "Yield efficiency"]
   },
   {
     id: "carbon",
@@ -111,23 +111,23 @@ const platformSections = [
     description: "Sustainability is embedded into the platform through land stewardship, biological systems, and future carbon pathways",
     details: [
       {
+        title: "Carbon Credit Pathway (Est. End 2026)",
+        description: "Establishing carbon credit pathway by end of 2026 for future monetization"
+      },
+      {
         title: "Tree-Based Carbon Sequestration",
-        description: "80,000 oil palms and other tree crops capturing significant carbon over decades"
+        description: "14,000+ trees currently planted, targeting 80,000 by 2030 for significant carbon capture"
       },
       {
         title: "Soil Carbon Enhancement",
         description: "Regenerative agricultural practices increasing soil organic matter and carbon storage"
       },
       {
-        title: "Biochar & Carbon Credit Potential",
-        description: "Future opportunity for biochar production and long-term carbon credit monetization"
-      },
-      {
-        title: "Climate-Aligned Model",
-        description: "Building a climate-positive agricultural platform for long-term sustainability"
+        title: "Biochar Potential",
+        description: "Future opportunity for biochar production and additional carbon benefits"
       }
     ],
-    metrics: ["Tree sequestration", "Regenerative practices", "Carbon credit potential"]
+    metrics: ["Pathway est. 2026", "Tree sequestration", "Regenerative practices"]
   },
   {
     id: "infrastructure",
@@ -135,6 +135,10 @@ const platformSections = [
     title: "Infrastructure & Operations",
     description: "Growing operational backbone supporting scale, efficiency, and long-term expansion",
     details: [
+      {
+        title: "14 Workers (2026)",
+        description: "Growing team from 4 workers in 2024 to 14 in 2026, scaling with operations"
+      },
       {
         title: "Multi-Site Operations",
         description: "Coordinated management across Osun and Oyo States with centralized oversight"
@@ -144,15 +148,11 @@ const platformSections = [
         description: "Tractor services and farming equipment enabling efficient cultivation at scale"
       },
       {
-        title: "Structured Expansion",
-        description: "Disciplined approach toward ~1,000 acres by 2030 with systematic site development"
-      },
-      {
-        title: "Integrated Logistics",
-        description: "Farm management systems supporting operations, tracking, and continuous improvement"
+        title: "Aggressive Expansion",
+        description: "Scaling aggressively from 250 acres (2026) to 1,000 acres by 2030"
       }
     ],
-    metrics: ["Multi-site coordination", "Mechanization focus", "Scaling to 1,000 acres"]
+    metrics: ["14 workers", "Multi-site ops", "Aggressive scaling"]
   }
 ]
 
