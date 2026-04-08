@@ -1,121 +1,158 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sprout, TreeDeciduous, Beef, Factory, Leaf, MapPin } from "lucide-react"
+import { Sprout, TreeDeciduous, Beef, Factory, Leaf, Settings, MapPin } from "lucide-react"
 
 const platformSections = [
   {
     id: "agriculture",
     icon: Sprout,
-    title: "Agriculture & Cultivation",
-    description: "Diversified crop strategy supporting near-term cash flow and soil health",
+    title: "Land & Cultivation",
+    description: "Strategic land development across Ikoyi, Otu, and Ilero forms the foundation of the platform",
     details: [
       {
-        title: "Cassava",
-        description: "Primary short-cycle crop across 90% of land, providing early returns while palm matures"
+        title: "Current Operations",
+        description: "250 acres currently operational across three strategic locations"
       },
       {
-        title: "Maize & Beans",
-        description: "Food crop rotation for soil improvement and diversified revenue"
+        title: "Crop Rotation",
+        description: "Cassava, maize, and beans in rotation supporting near-term productivity"
       },
       {
-        title: "Plantain",
-        description: "20,000 suckers intercropped with palm for additional near-term income"
+        title: "Soil Health",
+        description: "Continuous soil improvement and land optimization for long-term productivity"
       },
       {
-        title: "Cashew",
-        description: "Tree crop diversification with export potential"
+        title: "Diversified System",
+        description: "A diversified cropping system balancing near-term cash flow with soil health"
       }
     ],
-    metrics: ["250 acres operational", "90% cassava rotation", "20,000 plantain suckers"]
+    metrics: ["250 acres operational", "Cassava, maize, beans", "Soil improvement focus"]
   },
   {
     id: "palm",
     icon: TreeDeciduous,
-    title: "Palm Oil Development",
-    description: "The long-term economic engine of the platform",
+    title: "Palm Oil",
+    description: "Oil palm is the long-term economic engine of the platform, designed for scale, consistency, and value chain control",
     details: [
       {
-        title: "Systematic Planting",
-        description: "Disciplined approach to reaching 80,000 oil palm trees by 2030"
+        title: "Targeting ~80,000 Trees",
+        description: "Structured plantation expansion targeting approximately 80,000 oil palm trees"
       },
       {
-        title: "Yield Optimization",
-        description: "Focus on tree health, spacing, and long-term productivity"
+        title: "Structured Expansion",
+        description: "Systematic plantation growth over time with focus on tree health and spacing"
       },
       {
-        title: "Processing Integration",
-        description: "Capture value through vertical integration with processing infrastructure"
+        title: "Integrated Approach",
+        description: "Integrated approach to production and processing for maximum value capture"
+      },
+      {
+        title: "Long-Term Value",
+        description: "Designed for decades of consistent production and compounding returns"
       }
     ],
-    metrics: ["80,000 trees target", "Long-term plantation model", "Value chain capture"]
+    metrics: ["~80,000 trees target", "Structured expansion", "Value chain control"]
   },
   {
     id: "livestock",
     icon: Beef,
-    title: "Livestock Integration",
-    description: "Cattle expansion creating circularity and additional revenue",
+    title: "Livestock",
+    description: "Cattle are integrated into the system to enhance soil fertility, support future dairy production, and enable a circular agricultural model",
     details: [
       {
-        title: "Systematic Growth",
-        description: "Expanding from 10 to 80 head of cattle through disciplined herd management"
+        title: "Herd Expansion",
+        description: "Systematic growth from ~10 to ~80 cattle through disciplined herd management"
       },
       {
-        title: "Manure-Driven Fertility",
+        title: "Manure-Driven Enrichment",
         description: "Cattle waste enhances soil health and reduces external fertilizer dependence"
       },
       {
-        title: "Dairy Potential",
-        description: "Future revenue stream as herd matures and infrastructure develops"
+        title: "Dairy Foundation",
+        description: "Building foundation for future dairy operations as herd matures"
+      },
+      {
+        title: "Circular Model",
+        description: "Integrated livestock system creating synergies across the entire platform"
       }
     ],
-    metrics: ["10 → 80 head target", "Circular farming model", "Soil improvement"]
+    metrics: ["~10 → ~80 cattle", "Soil enrichment", "Dairy potential"]
   },
   {
     id: "processing",
     icon: Factory,
-    title: "Processing Infrastructure",
-    description: "10-acre palm oil mill unlocking additional value",
+    title: "Processing",
+    description: "A dedicated processing hub enables deeper value capture and operational control across the palm oil value chain",
     details: [
       {
-        title: "Ilero Processing Hub",
-        description: "Dedicated 10-acre site for palm fruit processing and oil extraction"
+        title: "10-Acre Facility in Ilero",
+        description: "Dedicated processing facility for palm fruit processing and oil extraction"
       },
       {
-        title: "Value Addition",
-        description: "Moving beyond raw production to capture processing margins"
+        title: "Improved Yield Efficiency",
+        description: "Better extraction rates and reduced waste through controlled processing"
       },
       {
-        title: "Quality Control",
-        description: "Direct oversight of the entire value chain from farm to finished product"
+        title: "Product Quality",
+        description: "Direct quality control from harvest through final product"
+      },
+      {
+        title: "Infrastructure for Scale",
+        description: "Built to support long-term growth and increasing production volumes"
       }
     ],
-    metrics: ["10-acre processing facility", "Vertical integration", "Quality assurance"]
+    metrics: ["10-acre facility", "Yield efficiency", "Long-term scale"]
   },
   {
     id: "carbon",
     icon: Leaf,
     title: "Carbon & Sustainability",
-    description: "Climate-positive agriculture and future carbon opportunity",
+    description: "Sustainability is embedded into the platform through land stewardship, biological systems, and future carbon pathways",
     details: [
       {
-        title: "Tree-Based Sequestration",
-        description: "80,000 oil palms creating significant carbon capture over decades"
+        title: "Tree-Based Carbon Sequestration",
+        description: "80,000 oil palms and other tree crops capturing significant carbon over decades"
       },
       {
         title: "Soil Carbon Enhancement",
-        description: "Improved agricultural practices increasing soil organic matter"
+        description: "Regenerative agricultural practices increasing soil organic matter and carbon storage"
       },
       {
-        title: "Biochar Potential",
-        description: "Future opportunity to convert palm waste into biochar for carbon and soil benefits"
+        title: "Biochar & Carbon Credit Potential",
+        description: "Future opportunity for biochar production and long-term carbon credit monetization"
       },
       {
-        title: "ESG Positioning",
-        description: "Building climate-positive agriculture for long-term value and credibility"
+        title: "Climate-Aligned Model",
+        description: "Building a climate-positive agricultural platform for long-term sustainability"
       }
     ],
-    metrics: ["Tree sequestration", "Soil improvement", "Future carbon credits"]
+    metrics: ["Tree sequestration", "Regenerative practices", "Carbon credit potential"]
+  },
+  {
+    id: "infrastructure",
+    icon: Settings,
+    title: "Infrastructure & Operations",
+    description: "Growing operational backbone supporting scale, efficiency, and long-term expansion",
+    details: [
+      {
+        title: "Multi-Site Operations",
+        description: "Coordinated management across Osun and Oyo States with centralized oversight"
+      },
+      {
+        title: "Equipment & Mechanization",
+        description: "Tractor services and farming equipment enabling efficient cultivation at scale"
+      },
+      {
+        title: "Structured Expansion",
+        description: "Disciplined approach toward ~1,000 acres by 2030 with systematic site development"
+      },
+      {
+        title: "Integrated Logistics",
+        description: "Farm management systems supporting operations, tracking, and continuous improvement"
+      }
+    ],
+    metrics: ["Multi-site coordination", "Mechanization focus", "Scaling to 1,000 acres"]
   }
 ]
 
@@ -152,7 +189,7 @@ export default function PlatformPage() {
             The <span className="gradient-text">Platform</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground text-balance">
-            Five integrated components working together to create a resilient, scalable agricultural ecosystem
+            Six integrated components working together to create a resilient, scalable agricultural ecosystem
           </p>
         </motion.div>
       </section>

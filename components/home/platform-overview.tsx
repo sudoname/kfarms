@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sprout, TreeDeciduous, Beef, Factory, Leaf, ArrowRight } from "lucide-react"
+import { Sprout, TreeDeciduous, Beef, Factory, Leaf, Settings, ArrowRight } from "lucide-react"
 
 const platforms = [
   {
@@ -34,6 +34,12 @@ const platforms = [
     description: "Tree-based sequestration, soil carbon, and future biochar opportunities",
     features: ["Carbon capture pathways", "ESG positioning", "Climate-positive farming"],
   },
+  {
+    icon: Settings,
+    title: "Infrastructure & Operations",
+    description: "Growing operational backbone supporting scale, efficiency, and long-term expansion",
+    features: ["Multi-site operations", "Equipment & mechanization", "Structured scaling to 1,000 acres"],
+  },
 ]
 
 export function PlatformOverview() {
@@ -54,7 +60,7 @@ export function PlatformOverview() {
             An Integrated <span className="gradient-text">Platform</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Five interconnected pillars driving long-term value creation across the agricultural value chain
+            Six interconnected pillars driving long-term value creation across the agricultural value chain
           </p>
         </motion.div>
 
