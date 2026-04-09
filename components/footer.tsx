@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Leaf, Mail, MapPin } from "lucide-react"
+import { Leaf, Mail, MapPin, MessageCircle } from "lucide-react"
 
 const footerSections = [
   {
@@ -53,10 +53,16 @@ export function Footer() {
               <MapPin size={16} className="text-gold" />
               <span>Ikoyi, Otu, Ilero - Nigeria</span>
             </div>
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-3">
               <Mail size={16} className="text-gold" />
-              <a href="mailto:info@kfarms.ng" className="hover:text-white transition-colors">
-                info@kfarms.ng
+              <a href="mailto:info@khan.ng" className="hover:text-white transition-colors">
+                info@khan.ng
+              </a>
+            </div>
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <MessageCircle size={16} className="text-gold" />
+              <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                +234 816 816 6109
               </a>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, Send, MessageCircle } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -76,8 +76,20 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
-                    <a href="mailto:info@kfarms.ng" className="text-muted-foreground hover:text-white transition-colors">
-                      info@kfarms.ng
+                    <a href="mailto:info@khan.ng" className="text-muted-foreground hover:text-white transition-colors">
+                      info@khan.ng
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-lg glass flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-5 h-5 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">WhatsApp</h3>
+                    <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-white transition-colors">
+                      +234 816 816 6109
                     </a>
                   </div>
                 </div>
