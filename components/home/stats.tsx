@@ -21,10 +21,10 @@ const stats = [
   },
   {
     icon: Factory,
-    value: 2,
-    suffix: " facilities",
-    label: "Processing Facilities",
-    description: "Mini mills in Ilero & Ikoyi",
+    value: 9,
+    suffix: "T/day",
+    label: "Processing Capacity",
+    description: "2 active facilities (Ilero & Ikoyi)",
   },
   {
     icon: Users,

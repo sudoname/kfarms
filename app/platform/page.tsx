@@ -11,23 +11,23 @@ const platformSections = [
     description: "Strategic land development across Ikoyi, Otu, and Ilero forms the foundation of the platform",
     details: [
       {
-        title: "Current Operations",
-        description: "250 acres currently operational across three strategic locations"
+        title: "250 Acres Operational",
+        description: "Ikoyi: Plantain & palm oil with nursery; Otu: Corn, palm oil & cassava; Ilero: 90 acres of cashew, cassava, plantain, palm oil, corn, tomato & pepper"
       },
       {
-        title: "Crop Rotation",
-        description: "Cassava, maize, and beans in rotation supporting near-term productivity"
+        title: "Diversified Cropping",
+        description: "Multiple crop species across sites providing revenue diversification and risk mitigation"
       },
       {
-        title: "Soil Health",
-        description: "Continuous soil improvement and land optimization for long-term productivity"
+        title: "Palm Development",
+        description: "Palm oil cultivation and nursery operations supporting long-term plantation growth"
       },
       {
-        title: "Diversified System",
-        description: "A diversified cropping system balancing near-term cash flow with soil health"
+        title: "Soil Health Focus",
+        description: "Continuous soil improvement and land optimization for sustainable long-term productivity"
       }
     ],
-    metrics: ["250 acres operational", "Cassava, maize, beans", "Soil improvement focus"]
+    metrics: ["250 acres operational", "Multi-crop diversity", "3 strategic locations"]
   },
   {
     id: "palm",
@@ -61,8 +61,8 @@ const platformSections = [
     description: "Cattle are integrated into the system to enhance soil fertility, support future dairy production, and enable a circular agricultural model",
     details: [
       {
-        title: "10 Cattle Added in 2026",
-        description: "Starting livestock operations with 10 cattle, scaling to 80 by 2030"
+        title: "10 Head Cattle at Otu (2026)",
+        description: "Current livestock operations at Otu site, scaling to 80 head across all locations by 2030"
       },
       {
         title: "Manure-Driven Enrichment",
@@ -70,39 +70,39 @@ const platformSections = [
       },
       {
         title: "Dairy Foundation",
-        description: "Building foundation for future dairy operations as herd matures"
+        description: "Building foundation for future dairy operations as herd matures and expands"
       },
       {
         title: "Circular Model",
         description: "Integrated livestock system creating synergies across the entire platform"
       }
     ],
-    metrics: ["10 cattle (2026)", "80 by 2030", "Circular farming"]
+    metrics: ["10 cattle at Otu", "80 by 2030", "Circular farming"]
   },
   {
     id: "processing",
     icon: Factory,
     title: "Processing",
-    description: "A dedicated processing hub enables deeper value capture and operational control across the palm oil value chain",
+    description: "Distributed processing infrastructure enabling deeper value capture and operational control across the palm oil value chain",
     details: [
       {
-        title: "2 Mini Processing Facilities (2026)",
-        description: "Mini oil palm production facilities in Ilero and Ikoyi for localized processing"
+        title: "Ikoyi Processing Facility",
+        description: "5 tonnes per day processing capacity for immediate value capture from local production"
       },
       {
-        title: "Improved Yield Efficiency",
-        description: "Better extraction rates and reduced waste through controlled processing"
+        title: "Ilero Processing Facility",
+        description: "4 tonnes per day processing capacity serving 90 acres of diversified crops"
       },
       {
-        title: "Product Quality",
-        description: "Direct quality control from harvest through final product"
+        title: "Planned Processing Hub",
+        description: "10-acre palm oil mill infrastructure in Ilero for long-term expansion and scale"
       },
       {
-        title: "Infrastructure for Scale",
-        description: "Built to support long-term growth and increasing production volumes"
+        title: "Value Chain Integration",
+        description: "Direct quality control from harvest through final product across all sites"
       }
     ],
-    metrics: ["2 mini facilities", "Ilero & Ikoyi", "Yield efficiency"]
+    metrics: ["9T/day capacity", "2 active facilities", "Expansion planned"]
   },
   {
     id: "carbon",
@@ -160,17 +160,20 @@ const locations = [
   {
     name: "Ikoyi",
     state: "Osun State",
-    description: "Primary cultivation area with diversified crops and palm development"
+    description: "Primary cultivation area with diversified crops (plantain and palm oil), palm nursery and palm development",
+    details: "Current processing capacity: 5T per day"
   },
   {
     name: "Otu",
     state: "Oyo State",
-    description: "Expansion site for additional acreage and crop rotation"
+    description: "Expansion site for additional acreage and crop rotation: corn, palm oil, and cassava",
+    details: "10 head cattle"
   },
   {
     name: "Ilero",
     state: "Oyo State",
-    description: "10-acre processing hub with palm oil mill infrastructure"
+    description: "90 acres of multiple crops: cashew, cassava, plantain, palm oil, corn, tomato, and pepper",
+    details: "4T per day processing facility + planned 10-acre processing hub"
   }
 ]
 
@@ -278,7 +281,10 @@ export default function PlatformPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{location.name}</h3>
                 <p className="text-sm text-gold font-semibold mb-3">{location.state}</p>
-                <p className="text-muted-foreground">{location.description}</p>
+                <p className="text-muted-foreground mb-3">{location.description}</p>
+                {location.details && (
+                  <p className="text-sm text-white/80 font-medium">{location.details}</p>
+                )}
               </motion.div>
             ))}
           </div>
