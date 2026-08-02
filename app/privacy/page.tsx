@@ -5,7 +5,7 @@ import { Shield } from "lucide-react"
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 bg-cream">
       {/* Hero */}
       <section className="container-custom mb-16">
         <motion.div
@@ -15,10 +15,10 @@ export default function PrivacyPage() {
           className="max-w-4xl mx-auto text-center"
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass mb-6">
-            <Shield className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium">Your Privacy Matters</span>
+            <Shield className="w-4 h-4 text-gold-700" />
+            <span className="text-sm font-medium text-foreground">Your privacy matters</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             Privacy <span className="gradient-text">Policy</span>
           </h1>
           <p className="text-lg text-muted-foreground">
@@ -48,9 +48,9 @@ export default function PrivacyPage() {
               We may collect the following types of information:
             </p>
             <ul className="space-y-2 text-muted-foreground ml-6">
-              <li>• <strong className="text-white">Personal Information:</strong> Name, email address, phone number, organization name, and any information you provide when contacting us.</li>
-              <li>• <strong className="text-white">Usage Data:</strong> Information about how you access and use our website, including IP address, browser type, pages visited, and time spent on pages.</li>
-              <li>• <strong className="text-white">Communication Data:</strong> Records of correspondence when you contact us via email, WhatsApp, or our contact form.</li>
+              <li>• <strong className="text-foreground">Personal Information:</strong> Name, email address, phone number, organization name, and any information you provide when contacting us.</li>
+              <li>• <strong className="text-foreground">Usage Data:</strong> Information about how you access and use our website, including IP address, browser type, pages visited, and time spent on pages.</li>
+              <li>• <strong className="text-foreground">Communication Data:</strong> Records of correspondence when you contact us via email, WhatsApp, or our contact form.</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ export default function PrivacyPage() {
               We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
             </p>
             <ul className="space-y-2 text-muted-foreground ml-6">
-              <li>• <strong className="text-white">Service Providers:</strong> With trusted third-party service providers who assist us in operating our website and conducting our business.</li>
-              <li>• <strong className="text-white">Legal Requirements:</strong> When required by law or to protect our rights, property, or safety.</li>
-              <li>• <strong className="text-white">Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets.</li>
-              <li>• <strong className="text-white">With Your Consent:</strong> When you have given explicit consent for sharing.</li>
+              <li>• <strong className="text-foreground">Service Providers:</strong> With trusted third-party service providers who assist us in operating our website and conducting our business.</li>
+              <li>• <strong className="text-foreground">Legal Requirements:</strong> When required by law or to protect our rights, property, or safety.</li>
+              <li>• <strong className="text-foreground">Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets.</li>
+              <li>• <strong className="text-foreground">With Your Consent:</strong> When you have given explicit consent for sharing.</li>
             </ul>
           </div>
 
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
               <li>• Withdraw consent at any time where we rely on consent</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              To exercise these rights, please contact us at <a href="mailto:info@khan.ng" className="text-gold hover:text-gold-400 transition-colors">info@khan.ng</a>.
+              To exercise these rights, please contact us at <a href="mailto:info@khan.ng" className="text-gold-700 hover:text-gold-800 transition-colors">info@khan.ng</a>.
             </p>
           </div>
 
@@ -154,14 +154,14 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy or our privacy practices, please contact us:
             </p>
             <div className="space-y-2 text-muted-foreground">
-              <p><strong className="text-white">Email:</strong> <a href="mailto:info@khan.ng" className="text-gold hover:text-gold-400 transition-colors">info@khan.ng</a></p>
-              <p><strong className="text-white">WhatsApp:</strong> <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-400 transition-colors">+234 816 816 6109</a></p>
-              <p><strong className="text-white">Company:</strong> Khan Farms (A subsidiary of Khan Innovations Nigeria Limited)</p>
-              <p><strong className="text-white">Locations:</strong> Ikoyi (Osun State), Otu (Oyo State), Ilero (Oyo State)</p>
+              <p><strong className="text-foreground">Email:</strong> <a href="mailto:info@khan.ng" className="text-gold-700 hover:text-gold-800 transition-colors">info@khan.ng</a></p>
+              <p><strong className="text-foreground">WhatsApp:</strong> <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="text-gold-700 hover:text-gold-800 transition-colors">+234 816 816 6109</a></p>
+              <p><strong className="text-foreground">Company:</strong> Khan Farms (A subsidiary of Khan Innovations Nigeria Limited)</p>
+              <p><strong className="text-foreground">Locations:</strong> Ikoyi (Osun State); Otu 1, Otu 2, Ilero &amp; Ikomu (Oyo State)</p>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10">
+          <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               By using our website and services, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
             </p>

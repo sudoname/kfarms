@@ -5,7 +5,7 @@ import { FileText } from "lucide-react"
 
 export default function TermsPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 bg-cream">
       {/* Hero */}
       <section className="container-custom mb-16">
         <motion.div
@@ -15,10 +15,10 @@ export default function TermsPage() {
           className="max-w-4xl mx-auto text-center"
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass mb-6">
-            <FileText className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium">Terms & Conditions</span>
+            <FileText className="w-4 h-4 text-gold-700" />
+            <span className="text-sm font-medium text-foreground">Terms &amp; conditions</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             Terms of <span className="gradient-text">Service</span>
           </h1>
           <p className="text-lg text-muted-foreground">
@@ -45,7 +45,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold mb-4">2. About Khan Farms</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Khan Farms is a subsidiary of Khan Innovations Nigeria Limited, operating as a modern agro-industrial platform focused on land development, oil palm cultivation, livestock, processing infrastructure, and sustainable carbon pathways across Nigeria.
+              Khan Farms is a subsidiary of Khan Innovations Nigeria Limited, operating as a modern agricultural business focused on land development, oil palm cultivation, livestock and processing infrastructure across Nigeria.
             </p>
           </div>
 
@@ -161,14 +161,14 @@ export default function TermsPage() {
               If you have any questions about these Terms of Service, please contact us:
             </p>
             <div className="space-y-2 text-muted-foreground">
-              <p><strong className="text-white">Email:</strong> <a href="mailto:info@khan.ng" className="text-gold hover:text-gold-400 transition-colors">info@khan.ng</a></p>
-              <p><strong className="text-white">WhatsApp:</strong> <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-400 transition-colors">+234 816 816 6109</a></p>
-              <p><strong className="text-white">Company:</strong> Khan Farms (A subsidiary of Khan Innovations Nigeria Limited)</p>
-              <p><strong className="text-white">Locations:</strong> Ikoyi (Osun State), Otu (Oyo State), Ilero (Oyo State)</p>
+              <p><strong className="text-foreground">Email:</strong> <a href="mailto:info@khan.ng" className="text-gold-700 hover:text-gold-800 transition-colors">info@khan.ng</a></p>
+              <p><strong className="text-foreground">WhatsApp:</strong> <a href="https://wa.me/2348168166109" target="_blank" rel="noopener noreferrer" className="text-gold-700 hover:text-gold-800 transition-colors">+234 816 816 6109</a></p>
+              <p><strong className="text-foreground">Company:</strong> Khan Farms (A subsidiary of Khan Innovations Nigeria Limited)</p>
+              <p><strong className="text-foreground">Locations:</strong> Ikoyi (Osun State); Otu 1, Otu 2, Ilero &amp; Ikomu (Oyo State)</p>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10">
+          <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               By using our website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
             </p>

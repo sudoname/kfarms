@@ -4,17 +4,24 @@ import "./globals.css"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { OrganizationSchema } from "@/components/seo/organization-schema"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Khan Farms | Building the Future of Agriculture in Nigeria",
-  description: "A modern Nigerian agro-industrial platform building long-term value through land, crops, livestock, processing, and carbon. Operating across 250 acres, scaling to 1,000 acres by 2030.",
-  keywords: ["Khan Farms", "Nigeria agriculture", "palm oil farm", "sustainable farming", "carbon credit farm", "agro-industrial platform", "livestock farming"],
+  metadataBase: new URL("https://kfarms.ng"),
+  title: {
+    default: "Khan Farms | Modern, Integrated Agriculture in Oyo & Osun States, Nigeria",
+    template: "%s | Khan Farms",
+  },
+  description: "Khan Farms operates 850 acres across five farms in Oyo and Osun States, Nigeria — growing maize, cassava, cashew, oil palm and more. Buy farm produce or partner with us.",
+  keywords: ["Khan Farms", "Oyo State agriculture", "Osun State agriculture", "buy farm produce Nigeria", "palm oil", "cassava", "maize", "cashew", "off-take agreement", "agricultural partnership Nigeria"],
   authors: [{ name: "Khan Farms" }],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Khan Farms | Building the Future of Agriculture in Nigeria",
-    description: "A modern Nigerian agro-industrial platform building long-term value through land, crops, livestock, processing, and carbon.",
+    title: "Khan Farms | Modern, Integrated Agriculture in Oyo & Osun States, Nigeria",
+    description: "850 acres across five farms in Oyo and Osun States. Buy farm produce or partner with us on processing, logistics, and land development.",
     url: "https://kfarms.ng",
     siteName: "Khan Farms",
     images: [
@@ -29,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Khan Farms | Building the Future of Agriculture in Nigeria",
-    description: "A modern Nigerian agro-industrial platform building long-term value through land, crops, livestock, processing, and carbon.",
+    title: "Khan Farms | Modern, Integrated Agriculture in Oyo & Osun States, Nigeria",
+    description: "850 acres across five farms in Oyo and Osun States. Buy farm produce or partner with us.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -52,12 +59,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={inter.className}>
+        <OrganizationSchema />
         <SmoothScroll>
           <Navigation />
           <main>{children}</main>
           <Footer />
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>

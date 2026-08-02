@@ -6,29 +6,29 @@ import { Target, Lightbulb, TrendingUp, Shield } from "lucide-react"
 const values = [
   {
     icon: Target,
-    title: "Long-Term Vision",
+    title: "Long-term vision",
     description: "Building for decades, not quarters. Every decision is made with 2030 and beyond in mind.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation & Scale",
-    description: "Combining traditional agricultural wisdom with modern operational discipline and precision.",
+    title: "Innovation & scale",
+    description: "Combining traditional agricultural knowledge with modern operational discipline and precision.",
   },
   {
     icon: TrendingUp,
-    title: "Systematic Growth",
-    description: "Disciplined expansion across land, crops, livestock, processing, and carbon pathways.",
+    title: "Systematic growth",
+    description: "Disciplined expansion across land, crops, livestock and processing.",
   },
   {
     icon: Shield,
-    title: "Sustainability First",
-    description: "Building climate-positive agriculture through soil improvement, sequestration, and circular systems.",
+    title: "Sustainability first",
+    description: "Developing measurable soil, tree-sequestration and agricultural-waste pathways over time.",
   },
 ]
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 bg-cream">
       {/* Hero Section */}
       <section className="container-custom mb-24">
         <motion.div
@@ -37,17 +37,18 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             About <span className="gradient-text">Khan Farms</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground text-balance">
-            Building a modern Nigerian agro-industrial platform through disciplined scale, integration, and long-term value creation
+          <p className="text-lg md:text-xl text-muted-foreground text-balance">
+            Building a modern Nigerian agricultural business through disciplined scale, integration,
+            and long-term value creation.
           </p>
         </motion.div>
       </section>
 
       {/* Mission Section */}
-      <section className="section-padding bg-black/30">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -56,17 +57,22 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Our <span className="gradient-text">Mission</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Our <span className="gradient-text">mission</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Khan Farms is building a vertically integrated agricultural platform in Nigeria that combines land development, crop cultivation, livestock, palm oil processing, and carbon opportunity into a single, coherent system.
+                Khan Farms is building an integrated agricultural business in Nigeria that brings
+                together land development, crop cultivation, livestock and processing into a single,
+                coherent system.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Currently operating across approximately 250 acres in Ikoyi (Osun State), Otu (Oyo State), and Ilero, we're scaling systematically toward 1,000 acres by 2030.
+                We currently operate across 850 acres in five locations in Oyo and Osun States —
+                Ikoyi (Osun); Otu 1, Otu 2, Ilero and Ikomu (Oyo) — and are scaling systematically
+                toward 1,000 acres by 2030.
               </p>
               <p className="text-lg text-muted-foreground">
-                This isn't just about farming. It's about building long-term agricultural infrastructure that delivers value across production, processing, sustainability, and strategic asset ownership.
+                This is about building durable agricultural infrastructure that delivers value across
+                production, processing and long-term asset ownership.
               </p>
             </motion.div>
 
@@ -77,24 +83,25 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="glass rounded-2xl p-8 md:p-12"
             >
-              <h3 className="text-2xl font-bold mb-6">Why Nigeria?</h3>
+              <h3 className="text-2xl font-bold mb-6 text-foreground">Why Nigeria?</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Massive Scale Potential</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Scale potential</h4>
                   <p className="text-muted-foreground">
-                    Nigeria has vast arable land and favorable climate for palm, cassava, and livestock
+                    Nigeria has vast arable land and a favourable climate for oil palm, cassava and
+                    livestock.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Growing Market</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Growing market</h4>
                   <p className="text-muted-foreground">
-                    Rising domestic demand for palm oil, food products, and value-added agriculture
+                    Rising domestic demand for palm oil, food products and value-added agriculture.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Carbon Opportunity</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Long-term value</h4>
                   <p className="text-muted-foreground">
-                    Climate-positive farming + future carbon markets create additional upside
+                    Tree crops and processing build assets that appreciate as plantations mature.
                   </p>
                 </div>
               </div>
@@ -104,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="section-padding">
+      <section className="section-padding bg-cream">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -114,11 +121,9 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="section-title">
-              Our <span className="gradient-text">Values</span>
+              Our <span className="gradient-text">values</span>
             </h2>
-            <p className="section-subtitle mx-auto">
-              The principles that guide everything we build
-            </p>
+            <p className="section-subtitle mx-auto">The principles that guide everything we build.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -131,12 +136,12 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass-hover rounded-2xl p-8"
+                  className="glass glass-hover rounded-2xl p-8"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-gold" />
+                  <div className="w-12 h-12 rounded-lg bg-green-100 border border-green-200 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-green-700" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{value.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
                 </motion.div>
               )
@@ -146,7 +151,7 @@ export default function AboutPage() {
       </section>
 
       {/* Parent Company */}
-      <section className="section-padding bg-black/30">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,14 +160,17 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center glass rounded-2xl p-12"
           >
-            <h3 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Part of <span className="gradient-text">Khan Innovations Nigeria Limited</span>
-            </h3>
+            </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Khan Farms is a subsidiary of Khan Innovations Nigeria Limited, a holding company building integrated platforms across agriculture, real estate, fintech, media, and marketing.
+              Khan Farms is a subsidiary of Khan Innovations Nigeria Limited, a holding company
+              building integrated platforms across agriculture, real estate, fintech, media and
+              marketing.
             </p>
             <p className="text-muted-foreground">
-              This broader ecosystem allows Khan Farms to leverage infrastructure, capital, and strategic positioning that independent farms cannot access.
+              This broader ecosystem lets Khan Farms draw on infrastructure, capital and strategic
+              positioning that independent farms cannot easily access.
             </p>
           </motion.div>
         </div>

@@ -94,7 +94,7 @@ All copy is written to be:
 - **Confident**: Not overly hyped, but credible and strong
 - **Strategic**: Focused on long-term value, not short-term tactics
 - **Premium**: Sophisticated language befitting a serious agricultural platform
-- **Specific**: Real numbers (250 acres, 80,000 trees, etc.)
+- **Specific**: Real numbers (450 acres, 80,000 trees, etc.)
 
 ## SEO Optimization
 

@@ -17,26 +17,40 @@ const milestones = [
     status: "completed",
   },
   {
-    year: "2025-2026",
+    year: "2025",
     title: "Rapid Expansion",
-    description: "Aggressive scaling across operations and infrastructure",
+    description: "Scaling operations and building infrastructure",
     metrics: [
-      "250 acres operational (2x growth)",
+      "150 acres operational (2x growth)",
       "14,000 trees planted (oil palm & cashew)",
       "2 mini processing facilities (Ilero & Ikoyi)",
       "14 workers (3.5x growth)",
-      "10 cattle added",
       "Cassava production scaled",
+    ],
+    status: "completed",
+  },
+  {
+    year: "2026",
+    title: "Aggressive Scaling",
+    description: "Major expansion across acreage, livestock, and diversification",
+    metrics: [
+      "850 acres operational (6x growth from 2025)",
+      "5 locations: Ilero, Ikoyi, Otu1, Otu2 and Ikomu",
+      "14,000 trees strong (oil palm, cashew & banana)",
+      "2 mini processing facilities (Ilero & Ikoyi)",
+      "18 workers",
+      "10 cattle added",
+      "Diversified crops: cassava, peanut, maize & soya beans",
       "Carbon credit pathway established by end 2026",
     ],
     status: "current",
   },
   {
     year: "2027-2028",
-    title: "Aggressive Scaling",
-    description: "Major expansion phase toward 2030 targets",
+    title: "Platform Integration",
+    description: "Continued expansion and processing optimization",
     metrics: [
-      "500-650 acres operational",
+      "900-1,000 acres operational",
       "40,000+ trees planted",
       "Processing capacity expansion",
       "40-50 cattle",
@@ -62,9 +76,9 @@ const milestones = [
 const targets = [
   {
     metric: "Land",
-    current: "250 acres (2026)",
+    current: "850 acres (2026)",
     target: "1,000 acres (2030)",
-    progress: 25,
+    progress: 85,
   },
   {
     metric: "Trees",
@@ -86,15 +100,15 @@ const targets = [
   },
   {
     metric: "Workforce",
-    current: "14 workers",
+    current: "18 workers (2026)",
     target: "Scaled team",
-    progress: 30,
+    progress: 35,
   },
   {
     metric: "Carbon",
     current: "Pathway establishing",
     target: "Active monetization",
-    progress: 20,
+    progress: 25,
   },
 ]
 
@@ -190,7 +204,7 @@ export default function VisionPage() {
               Growth <span className="gradient-text">Roadmap</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Systematic expansion from 250 to 1,000 acres
+              Systematic expansion from 850 to 1,000 acres
             </p>
           </motion.div>
 
@@ -260,7 +274,7 @@ export default function VisionPage() {
               By 2030, Khan Farms will be a <span className="gradient-text">1,000-acre integrated platform</span>
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
-              Combining disciplined land development, systematic palm plantation growth, livestock expansion, processing infrastructure, and carbon-positive agricultural practices into Nigeria's leading agro-industrial platform.
+              Combining disciplined land development, systematic palm plantation growth, livestock expansion, processing infrastructure, and measurable soil and tree-sequestration pathways into a leading Nigerian agro-industrial business.
             </p>
             <p className="text-muted-foreground">
               Built for decades, not quarters.

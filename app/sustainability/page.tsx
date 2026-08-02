@@ -3,81 +3,81 @@
 import { motion } from "framer-motion"
 import { Leaf, TreePine, Droplets, Recycle, TrendingUp, Target } from "lucide-react"
 
-const sustainabilityPillars = [
+const pathways = [
   {
     icon: TreePine,
-    title: "Tree-Based Carbon Capture",
-    description: "Long-term sequestration through systematic palm plantation development",
+    title: "Tree-based sequestration",
+    description: "Perennial tree crops that build long-lived carbon stocks as plantations mature.",
     details: [
-      "80,000 oil palm trees absorbing CO₂ over decades",
-      "Additional tree crops (cashew) contributing to carbon balance",
-      "Permanence through long-lived perennial plantations"
-    ]
+      "Oil palm and cashew planted for decades-long productivity",
+      "Permanence through long-lived perennial plantations",
+      "Sequestration potential grows as canopy establishes",
+    ],
   },
   {
     icon: Droplets,
-    title: "Soil Carbon Enhancement",
-    description: "Building organic matter and improving soil health systematically",
+    title: "Soil health & carbon",
+    description: "Building organic matter and improving soil structure across our farms over time.",
     details: [
-      "Manure from cattle improving soil fertility and carbon content",
-      "Cover cropping and rotation preventing erosion",
-      "No-till or minimal-till practices where feasible"
-    ]
+      "Cattle manure returned to fields to improve fertility",
+      "Cover cropping and rotation to reduce erosion",
+      "Minimal-till practices where feasible",
+    ],
   },
   {
     icon: Recycle,
-    title: "Circular Systems",
-    description: "Integrated farming creating closed-loop resource flows",
+    title: "Circular resource flows",
+    description: "Integrated farming that keeps nutrients and by-products within the system.",
     details: [
-      "Cattle manure → soil fertility → higher yields",
-      "Palm waste → potential biochar → carbon sequestration",
-      "Reduced external input dependence"
-    ]
+      "Livestock manure feeds soil fertility",
+      "Processing by-products reused rather than discarded",
+      "Reduced dependence on external inputs",
+    ],
   },
   {
     icon: Leaf,
-    title: "Biochar Potential",
-    description: "Future opportunity to convert agricultural waste into stable carbon",
+    title: "Agricultural-waste reuse",
+    description: "Exploring higher-value uses for palm and crop residues as operations scale.",
     details: [
-      "Palm fruit processing generates significant biomass",
-      "Biochar from this waste sequesters carbon for centuries",
-      "Soil amendment benefits alongside carbon capture"
-    ]
-  }
+      "Palm processing generates significant biomass",
+      "Potential biochar and soil-amendment pathways",
+      "Opportunity being assessed as volumes grow",
+    ],
+  },
 ]
 
-const carbonPathways = [
+const roadmap = [
   {
-    pathway: "Tree Sequestration",
+    pathway: "Tree sequestration",
     current: "Foundation planting underway",
-    timeline: "2024-2050+",
-    potential: "High - 80,000 mature palms"
+    horizon: "Long term",
+    note: "Grows with plantation maturity",
   },
   {
-    pathway: "Soil Carbon",
+    pathway: "Soil carbon",
     current: "Manure integration active",
-    timeline: "2024-2030",
-    potential: "Medium - systematic soil building"
+    horizon: "Ongoing",
+    note: "Systematic soil building",
   },
   {
-    pathway: "Biochar Production",
-    current: "Future opportunity",
-    timeline: "2027+",
-    potential: "High - palm waste utilization"
+    pathway: "Waste reuse / biochar",
+    current: "Under assessment",
+    horizon: "Future",
+    note: "Depends on processing scale",
   },
   {
-    pathway: "Carbon Credits",
-    current: "Market monitoring",
-    timeline: "2028+",
-    potential: "Revenue upside when markets mature"
-  }
+    pathway: "Carbon markets",
+    current: "Monitoring",
+    horizon: "Future",
+    note: "Optionality as markets mature",
+  },
 ]
 
 export default function SustainabilityPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 bg-cream">
       {/* Hero */}
-      <section className="container-custom mb-24">
+      <section className="container-custom mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,20 +85,21 @@ export default function SustainabilityPage() {
           className="max-w-4xl mx-auto text-center"
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass mb-6">
-            <Leaf className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium">Climate-Positive Agriculture</span>
+            <Leaf className="w-4 h-4 text-green-700" />
+            <span className="text-sm font-medium text-foreground">Sustainability pathways</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="gradient-text">Sustainability</span> by Design
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+            <span className="gradient-text">Sustainability</span> by design
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground text-balance">
-            Building agriculture that improves the land, captures carbon, and creates long-term environmental value
+          <p className="text-lg md:text-xl text-muted-foreground text-balance">
+            Developing measurable soil, tree-sequestration, and agricultural-waste pathways as our
+            operations grow — building agriculture that improves the land over time.
           </p>
         </motion.div>
       </section>
 
       {/* Philosophy */}
-      <section className="section-padding bg-black/30">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -107,17 +108,17 @@ export default function SustainabilityPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Not CSR. <span className="gradient-text">Business Model.</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Part of the <span className="gradient-text">operating model</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Sustainability isn't a separate initiative at Khan Farms. It's embedded in the core operating model.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Trees sequester carbon while generating palm oil revenue. Livestock manure improves soil while supporting dairy potential. Palm waste can become biochar, simultaneously sequestering carbon and enhancing soil.
+                We treat sustainability as part of how the farm runs, not a separate initiative.
+                Perennial tree crops generate revenue while building carbon stocks. Livestock manure
+                improves soil while supporting future dairy potential.
               </p>
               <p className="text-lg text-muted-foreground">
-                This creates a farming system where environmental benefit and economic value compound together over decades.
+                The aim is a farming system where environmental improvement and economic value build
+                together over decades — measured honestly as the data comes in.
               </p>
             </motion.div>
 
@@ -128,32 +129,32 @@ export default function SustainabilityPage() {
               transition={{ duration: 0.6 }}
               className="glass rounded-2xl p-8 md:p-12"
             >
-              <h3 className="text-2xl font-bold mb-6">Why This Matters</h3>
+              <h3 className="text-2xl font-bold mb-6 text-foreground">Why this matters</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Target className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
+                  <Target className="w-6 h-6 text-green-700 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-white mb-1">ESG Credibility</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Responsible growth</h4>
                     <p className="text-muted-foreground text-sm">
-                      Positions Khan Farms as a serious, forward-thinking agricultural platform
+                      Positions Khan Farms as a serious, long-term agricultural operator.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <TrendingUp className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
+                  <TrendingUp className="w-6 h-6 text-green-700 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-white mb-1">Future Revenue</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Future optionality</h4>
                     <p className="text-muted-foreground text-sm">
-                      Carbon markets are maturing - creates potential upside beyond agriculture
+                      Carbon and by-product markets may create upside beyond core agriculture.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Leaf className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
+                  <Leaf className="w-6 h-6 text-green-700 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-white mb-1">Land Health</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Land health</h4>
                     <p className="text-muted-foreground text-sm">
-                      Improved soil and carbon practices increase long-term productivity
+                      Better soil and tree cover support long-term productivity.
                     </p>
                   </div>
                 </div>
@@ -163,8 +164,8 @@ export default function SustainabilityPage() {
         </div>
       </section>
 
-      {/* Sustainability Pillars */}
-      <section className="section-padding">
+      {/* Pathways */}
+      <section className="section-padding bg-cream">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -173,16 +174,16 @@ export default function SustainabilityPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Four <span className="gradient-text">Pathways</span>
+            <h2 className="section-title">
+              Four <span className="gradient-text">pathways</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Integrated approaches to climate-positive agriculture
+            <p className="section-subtitle mx-auto">
+              Integrated approaches we are developing across our farms.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {sustainabilityPillars.map((pillar, index) => {
+            {pathways.map((pillar, index) => {
               const Icon = pillar.icon
               return (
                 <motion.div
@@ -191,17 +192,17 @@ export default function SustainabilityPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass-hover rounded-2xl p-8"
+                  className="glass glass-hover rounded-2xl p-8"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-green/20 border border-gold/30 flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-gold" />
+                  <div className="w-14 h-14 rounded-xl bg-green-100 border border-green-200 flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-green-700" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{pillar.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">{pillar.title}</h3>
                   <p className="text-muted-foreground mb-6">{pillar.description}</p>
                   <ul className="space-y-2">
                     {pillar.details.map((detail, i) => (
                       <li key={i} className="flex items-start space-x-2 text-sm">
-                        <span className="text-gold mt-1">•</span>
+                        <span className="text-green-700 mt-1">•</span>
                         <span className="text-muted-foreground">{detail}</span>
                       </li>
                     ))}
@@ -213,8 +214,8 @@ export default function SustainabilityPage() {
         </div>
       </section>
 
-      {/* Carbon Pathways */}
-      <section className="section-padding bg-black/30">
+      {/* Roadmap */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -223,37 +224,37 @@ export default function SustainabilityPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Carbon <span className="gradient-text">Roadmap</span>
+            <h2 className="section-title">
+              Sustainability <span className="gradient-text">roadmap</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Building toward carbon-positive agriculture and future monetization
+            <p className="section-subtitle mx-auto">
+              Where each pathway stands today, described honestly.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {carbonPathways.map((pathway, index) => (
+            {roadmap.map((item, index) => (
               <motion.div
-                key={pathway.pathway}
+                key={item.pathway}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass rounded-xl p-6"
               >
-                <h3 className="text-lg font-bold mb-3">{pathway.pathway}</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{item.pathway}</h3>
                 <div className="space-y-3 text-sm">
                   <div>
                     <span className="text-muted-foreground block mb-1">Status</span>
-                    <span className="text-white font-medium">{pathway.current}</span>
+                    <span className="text-foreground font-medium">{item.current}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block mb-1">Timeline</span>
-                    <span className="text-white font-medium">{pathway.timeline}</span>
+                    <span className="text-muted-foreground block mb-1">Horizon</span>
+                    <span className="text-foreground font-medium">{item.horizon}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground block mb-1">Potential</span>
-                    <span className="text-gold font-semibold">{pathway.potential}</span>
+                    <span className="text-muted-foreground block mb-1">Note</span>
+                    <span className="text-green-700 font-semibold">{item.note}</span>
                   </div>
                 </div>
               </motion.div>
@@ -265,10 +266,12 @@ export default function SustainabilityPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 text-center glass rounded-xl p-8"
+            className="mt-12 max-w-3xl mx-auto text-center glass rounded-xl p-8"
           >
             <p className="text-muted-foreground">
-              As carbon markets mature and ESG requirements tighten, Khan Farms' integrated sustainability model positions the platform for additional value creation beyond traditional agricultural revenue.
+              As these pathways develop and the data matures, we will report progress transparently.
+              We avoid overstating outcomes — every claim here reflects work that is genuinely
+              underway or being assessed.
             </p>
           </motion.div>
         </div>

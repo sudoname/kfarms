@@ -1,15 +1,31 @@
 import { Hero } from "@/components/home/hero"
 import { Stats } from "@/components/home/stats"
-import { PlatformOverview } from "@/components/home/platform-overview"
-import { CTA } from "@/components/home/cta"
+import {
+  WhatWeProduce,
+  OurFarms,
+  ProcessingInfrastructure,
+  AvailableProduce,
+  HowWeWork,
+  VisionPreview,
+  SustainabilityPreview,
+  Partnerships,
+  ContactCta,
+} from "@/components/home/home-sections"
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Stats />
-      <PlatformOverview />
-      <CTA />
+      <WhatWeProduce />
+      <OurFarms />
+      <ProcessingInfrastructure />
+      <AvailableProduce />
+      <HowWeWork />
+      <VisionPreview />
+      <SustainabilityPreview />
+      <Partnerships />
+      <ContactCta />
     </>
   )
 }
