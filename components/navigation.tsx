@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { FARM_LOCATIONS, METRICS } from "@/lib/farm-data"
+import { UserMenu } from "@/components/auth/user-menu"
 
 const locations = FARM_LOCATIONS.map((l) => ({
   name: l.displayName,
@@ -16,6 +17,7 @@ const locations = FARM_LOCATIONS.map((l) => ({
 const navItems = [
   { name: "Our Farms", href: "#", hasDropdown: true },
   { name: "Produce", href: "/produce" },
+  { name: "Sell to Us", href: "/sell" },
   { name: "Processing", href: "/processing" },
   { name: "Sustainability", href: "/sustainability" },
   { name: "Vision 2030", href: "/vision" },
@@ -123,6 +125,7 @@ export function Navigation() {
             <Link href="/contact" className="btn-primary text-sm !px-5 !py-2.5">
               Buy or Partner
             </Link>
+            <UserMenu />
           </div>
 
           {/* Mobile Menu Button */}
@@ -207,6 +210,9 @@ export function Navigation() {
               >
                 Buy or Partner
               </Link>
+              <div className="pt-4 border-t border-border" onClick={() => setIsMobileMenuOpen(false)}>
+                <UserMenu variant="mobile" />
+              </div>
             </div>
           </motion.div>
         )}

@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { OrganizationSchema } from "@/components/seo/organization-schema"
+import { SessionProvider } from "@/components/session-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -62,12 +63,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <OrganizationSchema />
-        <SmoothScroll>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </SmoothScroll>
+        <SessionProvider>
+          <SmoothScroll>
+            <Navigation />
+            <main>{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </SmoothScroll>
+        </SessionProvider>
       </body>
     </html>
   )

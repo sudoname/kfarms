@@ -1,0 +1,147 @@
+// Prisma schema — Khan Farms accounts, enquiries, and supplier offers.
+// See lib/auth.ts for NextAuth wiring.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+enum Role {
+  USER
+  ADMIN
+}
+
+enum EnquiryStatus {
+  NEW
+  IN_REVIEW
+  RESPONDED
+  CLOSED
+}
+
+// ---------------------------------------------------------------------------
+// NextAuth core models (+ Khan Farms extensions on User)
+// ---------------------------------------------------------------------------
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+
+  // Khan Farms extensions
+  role          Role      @default(USER)
+  phone         String?
+  phoneVerified DateTime?
+  organization  String?
+  passwordHash  String? // null for OAuth / magic-link-only users
+
+  accounts        Account[]
+  sessions        Session[]
+  enquiries       Enquiry[]
+  sellOffers      SellOffer[]
+  supplierProfile SupplierProfile?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ---------------------------------------------------------------------------
+// Business models
+// ---------------------------------------------------------------------------
+model Enquiry {
+  id               String        @id @default(cuid())
+  userId           String
+  type             String // from INQUIRY_TYPES (e.g. "Purchase farm produce")
+  productSlug      String? // ties to lib/farm-data PRODUCE slug when known
+  productName      String?
+  quantity         String?
+  deliveryLocation String?
+  message          String        @db.Text
+  status           EnquiryStatus @default(NEW)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([status])
+}
+
+model SellOffer {
+  id            String        @id @default(cuid())
+  userId        String
+  productName   String
+  category      String?
+  quantity      String
+  unit          String?
+  askingPrice   String?
+  location      String
+  availableFrom DateTime?
+  notes         String?       @db.Text
+  status        EnquiryStatus @default(NEW)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([status])
+}
+
+model SupplierProfile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  farmName    String?
+  region      String?
+  primaryCrops String[]
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

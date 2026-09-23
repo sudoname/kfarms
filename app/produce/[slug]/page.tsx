@@ -245,18 +245,18 @@ export default async function ProduceDetailPage({ params }: ProducePageProps) {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <Link href={`/enquire?product=${item.slug}`} className="btn-primary">
+                Request to buy
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </Link>
               <a
                 href={whatsappLink(quoteMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-secondary"
               >
-                Request a quote
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                Quick quote on WhatsApp
               </a>
-              <Link href="/contact" className="btn-secondary">
-                Contact sales
-              </Link>
             </div>
           </div>
         </div>
